@@ -11,8 +11,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "NewsMarker — Bookmark & Read",
-  description: "Aggregate news from top sources, bookmark your favorites, and read them later. Powered by free RSS feeds.",
+  description: "Aggregate news from top sources, bookmark your favorites, and read them later.",
   keywords: ["news", "bookmarks", "RSS", "reader", "BBC", "CNN", "TechCrunch"],
+  verification: {
+    google: "1AJWkiMPtVJGrJqfJDpaX8L90py1EwNoQFOliYinzGQ",
+  },
 };
 
 export default function RootLayout({
