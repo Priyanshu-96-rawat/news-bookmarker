@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --color-primary: #2bb24c;
+    --color-primary-hover: #269d43;
+    --color-bg-primary: #ffffff;
+    --color-bg-secondary: #f4f4f4;
+    --color-bg-card: #ffffff;
+    --color-text-primary: #333333;
+    --color-text-secondary: #777777;
+    --color-border: #eaeaea;
+  }
+
+  .dark {
+    --color-bg-primary: #1a1d20;
+    --color-bg-secondary: #24272b;
+    --color-bg-card: #1a1d20;
+    --color-text-primary: #e0e0e0;
+    --color-text-secondary: #999999;
+    --color-border: #2a2d30;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-border) transparent;
+  }
+
+  body {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+
+  /* Retaining input field classes but making them flatter for the new theme */
+  .input-field {
+    @apply w-full rounded-md border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 outline-none transition-all focus:border-[#2bb24c] focus:ring-1 focus:ring-[#2bb24c];
+  }
+
+  .btn-primary {
+    @apply w-full rounded-md bg-[#2bb24c] py-3 text-sm font-semibold text-white transition-all hover:bg-[#269d43] active:scale-[0.99] disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
