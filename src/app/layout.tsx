@@ -10,11 +10,15 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "NewsMarker — Bookmark & Read",
-  description: "Aggregate news from top sources, bookmark your favorites, and read them later.",
-  keywords: ["news", "bookmarks", "RSS", "reader", "BBC", "CNN", "TechCrunch"],
-  verification: {
-    google: "1AJWkiMPtVJGrJqfJDpaX8L90py1EwNoQFOliYinzGQ",
+  title: 'NewsMarker — Bookmark & Read Top News',
+  description: 'Curate and bookmark top stories from BBC, CNN & TechCrunch. Powered by AI categorization.',
+  keywords: ['news', 'bookmarks', 'BBC', 'CNN', 'TechCrunch', 'AI news'],
+  openGraph: {
+    title: 'NewsMarker',
+    description: 'Bookmark and read curated news stories',
+    url: 'https://news-bookmarker.vercel.app',
+    siteName: 'NewsMarker',
+    type: 'website',
   },
 };
 
