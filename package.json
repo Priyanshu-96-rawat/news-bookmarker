@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
+    "@vercel/analytics": "^1.6.1",
     "firebase": "^12.9.0",
     "firebase-admin": "^13.6.1",
     "next": "16.1.6",
